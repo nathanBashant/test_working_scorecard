@@ -2,6 +2,17 @@
 import java.util.Scanner;
 import java.util.Random;
 
+/**
+* This program plays the game of Yahtzee through the terminal
+* CPSC 224-01, Fall 2022
+* Programming Assignment #2
+* No sources to cite.
+* 
+* @author Nathan Bashant
+* @version v1.1 9/20/22
+*/
+
+
 
 public class Yahtzee {
     
@@ -13,6 +24,7 @@ public class Yahtzee {
     public String keep = "nnnnn";
     private final int TOT_DICE = 5;
     roll_the_dice rollDice = new roll_the_dice();
+    
 
     public int maxOfAKindFound(int dice[]){
         int maxCount = 0;
