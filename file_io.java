@@ -20,6 +20,8 @@ public class file_io {
         System.out.println("You are playing with " + num_dice_txt + " " + num_sides_txt + "-sided dice"); 
         System.out.println("You get " + num_rolls_txt + " rolls per hand"); 
 
+        scan.close();
+
         return num_sides_txt;
     }
 
@@ -34,6 +36,8 @@ public class file_io {
 
         System.out.println(num_dice_txt);
 
+        scan.close();
+
         return num_dice_txt;
     }
 
@@ -47,6 +51,8 @@ public class file_io {
         num_rolls_txt = scan.nextInt();
 
         System.out.println(num_rolls_txt);
+
+        scan.close();
 
         return num_rolls_txt;
     }
