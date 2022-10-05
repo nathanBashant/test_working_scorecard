@@ -1,0 +1,12 @@
+6
+5
+3
+
+
+# of sides of each die
+# of dice in hand
+# of rolls allowed per turn
+
+Your solution is complete when you can play a single hand 
+and calculate and display possible scores for each scorecard 
+line, just like in Homework #1.
