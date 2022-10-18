@@ -119,8 +119,6 @@ public class methods {
         System.out.println("number of dice: " + num_dice);
         System.out.println("number of rolls per hand: " + rolls_per_hand);
         
-
-        
         for(int i = 0; i < dice.length; i++){
             dice[i] = rollDice();
         }
@@ -150,5 +148,6 @@ public class methods {
         return dice;
 
     }
+
     
 }

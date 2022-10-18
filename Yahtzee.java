@@ -5,11 +5,11 @@ import java.util.Random;
 /**
 * This program plays the game of Yahtzee through the terminal
 * CPSC 224-01, Fall 2022
-* Programming Assignment #2
+* Programming Assignment #3
 * No sources to cite.
 * 
 * @author Nathan Bashant
-* @version v1.1 9/20/22
+* @version v2.1 10/15/22
 */
 
 
@@ -20,7 +20,6 @@ public class Yahtzee {
     methods m = new methods();
 
     /* Scorecard */
-    
 
     public void run (){
         do {
