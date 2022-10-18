@@ -10,7 +10,7 @@ public class file_io {
 
     public int read_sides () throws FileNotFoundException{
 
-        File file = new File("N:/storage/HW2(224_Yahtzee)/hw2-yahtzee-nathanBashant/yahtzeeConfig.txt");
+        File file = new File("hw2-yahtzee-nathanBashant/yahtzeeConfig.txt");
         Scanner scan = new Scanner(file);
 
         num_sides_txt = scan.nextInt();
@@ -27,7 +27,7 @@ public class file_io {
 
     public int read_dice () throws FileNotFoundException{
 
-        File file = new File("N:/storage/HW2(224_Yahtzee)/hw2-yahtzee-nathanBashant/yahtzeeConfig.txt");
+        File file = new File("hw2-yahtzee-nathanBashant/yahtzeeConfig.txt");
         Scanner scan = new Scanner(file);
 
         num_sides_txt = scan.nextInt();
@@ -43,7 +43,7 @@ public class file_io {
 
     public int read_rolls () throws FileNotFoundException{
 
-        File file = new File("N:/storage/HW2(224_Yahtzee)/hw2-yahtzee-nathanBashant/yahtzeeConfig.txt");
+        File file = new File("hw2-yahtzee-nathanBashant/yahtzeeConfig.txt");
         Scanner scan = new Scanner(file);
 
         num_sides_txt = scan.nextInt();
@@ -57,6 +57,14 @@ public class file_io {
         return num_rolls_txt;
     }
     
+
+    @Test
+
+    public void TestFileIO(){
+        
+
+    }
+
 
 
 
