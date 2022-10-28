@@ -12,7 +12,7 @@ public class game {
         file_io fl = new file_io();
         
         fl.read_sides();
-
+        
         num_sides_main = sp.user_input_num_sides();
         num_dice_main = sp.user_input_num_dice();
         rolls_per_hand_main = sp.user_input_rolls_hand();

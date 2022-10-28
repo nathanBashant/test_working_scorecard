@@ -8,15 +8,27 @@ public class spock {
     public Scanner scan = new Scanner(System.in);
     public char config_change;
 
+    file_io fio = new file_io();
+
+    public void no_change(){
+        System.out.println("You are playing with " + fio.num_dice_txt + " " + fio.num_sides_txt + "-sided dice"); 
+        System.out.println("You get " + fio.num_rolls_txt + " rolls per hand"); 
+    }
+
     public int user_input_num_sides() {
 
-        System.out.println("Enter 'y' if you would like to change the configuration");
+        System.out.println("Enter 'y' if you would like to change the configuration or 'n' to keep current configuration");
         config_change = scan.next().charAt(0);
 
         if (config_change == 'y'){
             System.out.println("enter the number of sides on each die");
             num_sides = scan.nextInt();
         }
+        /*
+        else if (config_change == 'n'){
+            no_change();
+        }
+        */
 
         return num_sides;
     }

@@ -28,11 +28,23 @@ public class Yahtzee {
 
             while (m.rollPerTurn < m.rolls_per_hand){
 
-                System.out.println("enter dice to keep (y or n) ");
+                System.out.println("enter dice to keep (y or n), on the next line, press 'S' for scorecard or any key to continue");
 
                 m.keep = scan.next();
+                m.new_keep = scan.next().charAt(0);
 
-                m.rollAgain();
+                if (m.new_keep == 'S'){
+                    m.print_scorecard();
+                    System.out.println("Please re-enter your dice to keep (y or n)");
+                    System.out.print("Your roll currently: " );
+                    for(int i = 0; i < m.dice.length; i++){
+                        System.out.print(m.dice[i] + " ");
+                    }
+                    System.out.println();
+                }
+                else{
+                    m.rollAgain();
+                }
             }
 
             System.out.println("Here is your sorted hand: ");
@@ -91,7 +103,9 @@ public class Yahtzee {
             else{
                 System.out.println("Score 0 on the Yahtzee line");
             }
-
+            System.out.println("Scorecard:");
+            System.out.println();
+            m.print_scorecard();
             System.out.println();
             System.out.println("Enter 'y' to play again or any key to stop");
             m.playAgain = scan.next().charAt(0);

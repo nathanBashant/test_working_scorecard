@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 import java.util.Random;
 
 
@@ -17,6 +18,7 @@ public class methods {
     public int rollPerTurn;
     public char playAgain = 'y';
     public String keep = "nnnnn";
+    public char new_keep = 'S';
     public final int TOT_DICE = num_dice;
     public Random rand = new Random();
     
@@ -148,6 +150,88 @@ public class methods {
         return dice;
 
     }
+
+    public void print_scorecard(){
+        sortArray(dice);
+        System.out.println();
+
+        System.out.println("Line        Score");
+        System.out.println("------------------");
+        int subtotal_score = 0;
+        int bonus = 0;
+        int upper_total = 0;
+        int tofk = 0;
+        int fofk = 0;
+        int fh = 0;
+        int ss = 0;
+        int ls = 0;
+        int yaht = 0;
+        int chance = 0;
+        int lower_total = 0;
+
+
+        for (int dieValue = 1; dieValue <= num_sides; dieValue++){
+            int currentCount = 0;
+            for (int diePosition = 0; diePosition < num_dice; diePosition++){
+                if (dice[diePosition] == dieValue)
+                    currentCount++;
+            }
+            int die_score = dieValue * currentCount;
+            System.out.println(dieValue + "              " + die_score); 
+            subtotal_score = subtotal_score + die_score;
+        }
+
+        if (subtotal_score >= 63){
+            bonus = 35;
+        }
+
+        upper_total = subtotal_score + bonus;
+
+        System.out.println("------------------");
+        System.out.println("Sub Total     " + subtotal_score);
+        System.out.println("Bonus         " + bonus);
+        System.out.println("Upper Total    " + upper_total);
+        System.out.println("------------------");
+
+        if (maxOfAKindFound(dice) >= 3){
+            tofk = totalAllDice(dice);
+        }
+
+        if (maxOfAKindFound(dice) >= 4){
+            fofk = totalAllDice(dice);
+        }
+
+        if (fullHouseFound(dice)){
+            fh = 35;
+        }
+
+        if (maxStraightFound(dice) >= 4){
+            ss = 30;
+        }
+        if (maxStraightFound(dice) >= 5){
+            ls = 40;
+        }
+       
+        if (maxOfAKindFound(dice) >= 5){
+            yaht = 50;
+        }
+
+        chance = subtotal_score;
+        lower_total = tofk + fofk + fh + ss + ls + yaht + chance;
+
+        System.out.println("3 of a Kind     " + tofk);
+        System.out.println("4 of a Kind     " + fofk);
+        System.out.println("Full House      " + fh);
+        System.out.println("Small Straight  " + ss);
+        System.out.println("Large Straight  " + ls);
+        System.out.println("Yahtzee         " + yaht);
+        System.out.println("Chance          " + chance);
+        System.out.println("------------------");
+        System.out.println("Lower Total:    " + lower_total);
+
+
+    }
+
 
     
 }
