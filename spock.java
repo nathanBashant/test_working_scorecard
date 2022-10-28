@@ -1,3 +1,15 @@
+/*
+COMMENT BLOCK FOR ENTIRE CLASS
+# Programmer: Nathan Bashant-Coon
+# Class: CptS 224, Fall 2022
+# Homework Assignment #4
+# 10/20/22
+# 
+# Class Description: mostly the entire implementation of lizrd spock yahztzee, if the uzer decides to change the dice
+# configuration, this is what the program uses
+*/
+
+
 import java.util.Scanner;
 
 public class spock {

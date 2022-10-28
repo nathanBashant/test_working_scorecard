@@ -1,3 +1,16 @@
+/*
+COMMENT BLOCK FOR ENTIRE CLASS
+# Programmer: Nathan Bashant-Coon
+# Class: CptS 224, Fall 2022
+# Homework Assignment #4
+# 10/20/22
+# 
+# Class Description: the main purpose of this class is to simply read in the txt configuration document and return the
+# current values that are inside. If the user wishes to change the dice configuration, the new configuration is written
+# to the txt file.
+*/
+
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;

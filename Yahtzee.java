@@ -12,6 +12,16 @@ import java.util.Random;
 * @version v2.1 10/15/22
 */
 
+/*
+COMMENT BLOCK FOR ENTIRE CLASS
+# Programmer: Nathan Bashant-Coon
+# Class: CptS 224, Fall 2022
+# Homework Assignment #4
+# 10/20/22
+# 
+# Class Description: runs through the game of yahtzee with lizard spock implementation, uses the methods class to roll
+# dice, sort the dice array, calculate scores, and creates the main game loop.
+*/
 
 public class Yahtzee {
 

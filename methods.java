@@ -1,3 +1,15 @@
+
+/*
+COMMENT BLOCK FOR ENTIRE CLASS
+# Programmer: Nathan Bashant-Coon
+# Class: CptS 224, Fall 2022
+# Homework Assignment #4
+# 10/20/22
+# 
+# Class Description: methods that are used in the Yahtzee class when executing the main game
+*/
+
+
 import java.util.Scanner;
 
 import java.util.Random;
