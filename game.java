@@ -9,8 +9,7 @@ COMMENT BLOCK FOR ENTIRE CLASS
 # for main functionality. 
 */
 
-
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class game {
 
@@ -19,7 +18,7 @@ public class game {
     public static int rolls_per_hand_main;
 
 
-    public static void main(String[] args) throws FileNotFoundException{
+    public static void main(String[] args) throws IOException {
         spock sp = new spock();
         file_io fl = new file_io();
         

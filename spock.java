@@ -9,8 +9,12 @@ COMMENT BLOCK FOR ENTIRE CLASS
 # configuration, this is what the program uses
 */
 
-
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.IOException;
 
 public class spock {
 
@@ -27,7 +31,9 @@ public class spock {
         System.out.println("You get " + fio.num_rolls_txt + " rolls per hand"); 
     }
 
-    public int user_input_num_sides() {
+    public int user_input_num_sides() throws IOException{
+
+        File file = new File("hw2-yahtzee-nathanBashant/yahtzeeConfig.txt");
 
         System.out.println("Enter 'y' if you would like to change the configuration or 'n' to keep current configuration");
         config_change = scan.next().charAt(0);
@@ -35,7 +41,16 @@ public class spock {
         if (config_change == 'y'){
             System.out.println("enter the number of sides on each die");
             num_sides = scan.nextInt();
+
+            FileWriter fileWriter = new FileWriter(file);
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+
+            printWriter.print(num_sides);
+            printWriter.close();
+
         }
+
+        
         /*
         else if (config_change == 'n'){
             no_change();
@@ -45,19 +60,37 @@ public class spock {
         return num_sides;
     }
 
-    public int user_input_num_dice() {
+    public int user_input_num_dice() throws IOException{
+        File file = new File("hw2-yahtzee-nathanBashant/yahtzeeConfig.txt");
+
         if (config_change == 'y'){
             System.out.println("enter the number of dice in play");
             num_dice = scan.nextInt();
+
+            FileWriter fileWriter = new FileWriter(file);
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+
+            printWriter.print(num_dice);
+            printWriter.close();
         }
 
         return num_dice;
     }
 
-    public int user_input_rolls_hand() {
+    public int user_input_rolls_hand() throws IOException{
+        File file = new File("hw2-yahtzee-nathanBashant/yahtzeeConfig.txt");
+
         if (config_change == 'y'){
             System.out.println("enter the number of rolls per hand");
             rolls_per_hand = scan.nextInt();
+
+            FileWriter fileWriter = new FileWriter(file);
+            PrintWriter printWriter = new PrintWriter(fileWriter);
+
+            printWriter.println(num_sides);
+            printWriter.println(num_dice);
+            printWriter.println(rolls_per_hand);
+            printWriter.close();
         }
 
         return rolls_per_hand;
